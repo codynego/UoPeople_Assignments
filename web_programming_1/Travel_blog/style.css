@@ -1,0 +1,31 @@
+section {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section > div {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+section > div:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#one {
+    background-color: #ffcc00;
+}
+
+#two {
+    background-color: #ff6699;
+}
+#three {
+    background-color: #66ccff;
+}
+#four {
+    background-color: #99cc00;
+}
