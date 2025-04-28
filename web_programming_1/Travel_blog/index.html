@@ -1,20 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel blog</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Blog Homepage</title>
+  <style>
+    /* Style the overall page layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Grid for number blocks */
+    .number-blocks {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    /* Individual clickable number block styles */
+    .block {
+      color: white;
+      font-size: 2rem;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    /* Hover effect for interaction feedback */
+    .block:hover {
+      transform: scale(1.1);
+    }
+
+    /* Specific background colors for distinction */
+    #block1 { background-color: #3498db; } /* Europe */
+    #block2 { background-color: #2ecc71; } /* Asia */
+    #block3 { background-color: #e67e22; } /* America */
+    #block4 { background-color: #9b59b6; } /* Africa */
+
+    /* Nested list container styles */
+    .continent-section {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 10px;
+      display: none; /* Hidden by default */
+    }
+
+    /* Show section when active */
+    .continent-section.active {
+      display: block;
+    }
+
+    /* Styling for ordered and unordered lists */
+    ol {
+      color: #2c3e50;
+    }
+
+    ul {
+      color: #7f8c8d;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-    <section>
-        <div id="one">1</div>
-        <div id="two">2</div>
-        <div id="three">3</div>
-        <div id="four">4</div>
-    </section>
+  <h1>Explore the World - Travel Blog</h1>
 
+  <!-- Clickable blocks representing continents -->
+  <div class="number-blocks">
+    <div id="block1" class="block" onclick="showSection(1)">1</div>
+    <div id="block2" class="block" onclick="showSection(2)">2</div>
+    <div id="block3" class="block" onclick="showSection(3)">3</div>
+    <div id="block4" class="block" onclick="showSection(4)">4</div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Nested list for Europe -->
+  <div id="section1" class="continent-section">
+    <h2>Europe</h2>
+    <ol>
+      <li>France
+        <ul>
+          <li>Paris</li>
+        </ul>
+      </li>
+      <li>Italy
+        <ul>
+          <li>Rome</li>
+        </ul>
+      </li>
+      <li>Greece
+        <ul>
+          <li>Athens</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Asia section -->
+  <div id="section2" class="continent-section">
+    <h2>Asia</h2>
+    <ol>
+      <li>Japan
+        <ul>
+          <li>Tokyo</li><li>Kyoto</li><li>Osaka</li>
+        </ul>
+      </li>
+      <li>China
+        <ul>
+          <li>Beijing</li><li>Shanghai</li><li>Xi'an</li>
+        </ul>
+      </li>
+      <li>India
+        <ul>
+          <li>New Delhi</li><li>Mumbai</li><li>Jaipur</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- America section -->
+  <div id="section3" class="continent-section">
+    <h2>America</h2>
+    <ol>
+      <li>USA
+        <ul>
+          <li>New York City</li><li>Los Angeles</li><li>Chicago</li>
+        </ul>
+      </li>
+      <li>Brazil
+        <ul>
+          <li>Rio de Janeiro</li><li>São Paulo</li><li>Salvador</li>
+        </ul>
+      </li>
+      <li>Canada
+        <ul>
+          <li>Toronto</li><li>Vancouver</li><li>Montreal</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Africa section -->
+  <div id="section4" class="continent-section">
+    <h2>Africa</h2>
+    <ol>
+      <li>South Africa
+        <ul>
+          <li>Cape Town</li><li>Johannesburg</li><li>Durban</li>
+        </ul>
+      </li>
+      <li>Egypt
+        <ul>
+          <li>Cairo</li><li>Luxor</li><li>Sharm El Sheikh</li>
+        </ul>
+      </li>
+      <li>Morocco
+        <ul>
+          <li>Marrakech</li><li>Casablanca</li><li>Fez</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    /**
+     * Show only the selected section, hiding the others.
+     * @param {number} number - The block number clicked.
+     */
+    function showSection(number) {
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById(`section${i}`).classList.remove('active');
+      }
+      document.getElementById(`section${number}`).classList.add('active');
+    }
+  </script>
 </body>
 </html>

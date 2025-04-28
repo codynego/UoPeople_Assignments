@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  view
+  <title>Travel Stories</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 2px solid #6c63ff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* Image Styling */
+    img.attraction {
+      width: 150px;
+      height: auto;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    img.attraction:hover {
+      opacity: 0.6;
+    }
+
+    /* Number Styling */
+    .number-blocks span {
+      display: inline-block;
+      background-color: #6c63ff;
+      color: white;
+      font-size: 24px;
+      margin: 5px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .number-blocks span:hover {
+      transform: scale(1.2);
+    }
+
+    /* Nested List Styling */
+    .styled-list ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .styled-list > ul > li {
+      color: #2a2a72;
+      font-weight: bold;
+    }
+
+    .styled-list ul ul li {
+      color: #6c63ff;
+      font-weight: normal;
+    }
+
+    /* Sections */
+    .section-info {
+      margin-top: 50px;
+      border-top: 2px dashed #ccc;
+      padding-top: 20px;
+    }
+
+    .section-info h2 {
+      color: #2a2a72;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Travel Destinations</h1>
+
+  <table>
+    <tr>
+      <th>Destination</th>
+      <th>Attraction</th>
+    </tr>
+    <tr>
+      <td>Paris</td>
+      <td>
+        <a href="#paris-info">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower" class="attraction">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Rome</td>
+      <td>
+        <a href="#rome-info">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg" alt="Colosseum" class="attraction">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>New York</td>
+      <td>
+        <a href="#ny-info">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg" alt="Statue of Liberty" class="attraction">
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Colorful Number Blocks</h2>
+  <div class="number-blocks">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </div>
+
+  <h2>Nested List Example</h2>
+  <div class="styled-list">
+    <ul>
+      <li>Europe
+        <ul>
+          <li>France</li>
+          <li>Italy</li>
+        </ul>
+      </li>
+      <li>North America
+        <ul>
+          <li>USA</li>
+          <li>Canada</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Jump Sections -->
+  <div id="paris-info" class="section-info">
+    <h2>Eiffel Tower, Paris</h2>
+    <p>The Eiffel Tower is one of the most iconic landmarks in the world, representing Paris with its intricate iron structure and romantic allure.</p>
+  </div>
+
+  <div id="rome-info" class="section-info">
+    <h2>Colosseum, Rome</h2>
+    <p>The Colosseum stands as a grand reminder of ancient Roman engineering, serving as an arena for gladiatorial combat and public spectacles.</p>
+  </div>
+
+  <div id="ny-info" class="section-info">
+    <h2>Statue of Liberty, New York</h2>
+    <p>A gift from France to the U.S., the Statue of Liberty is a symbol of freedom and democracy, welcoming immigrants as they arrive in America.</p>
+  </div>
+
+</body>
+</html>
